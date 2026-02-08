@@ -7,7 +7,7 @@ La herramienta analiza código C **sin ejecutarlo**, construyendo un AST (Abstra
 
 ---
 
-## 🎯 Objetivos del proyecto
+## Objetivos del proyecto
 
 - Analizar código C de forma estática (sin ejecución)
 - Detectar errores frecuentes relacionados con:
@@ -23,7 +23,7 @@ Este proyecto **no pretende competir con herramientas comerciales**, sino servir
 
 ---
 
-## 🧠 Enfoque técnico
+## Enfoque técnico
 
 - El análisis se basa en **AST real**, no en expresiones regulares
 - Se utilizan bindings de **Clang / libclang** para el parsing
@@ -32,7 +32,7 @@ Este proyecto **no pretende competir con herramientas comerciales**, sino servir
 
 ---
 
-## 🏗️ Arquitectura del proyecto
+## Arquitectura del proyecto
 
 ```
 StaticCAnalyzer/
@@ -54,7 +54,7 @@ StaticCAnalyzer/
 
 ---
 
-## 🔍 Reglas de análisis implementadas (ejemplo)
+## Reglas de análisis implementadas (ejemplo)
 
 ### Seguridad de memoria
 - Variables no inicializadas
@@ -75,7 +75,7 @@ StaticCAnalyzer/
 
 ---
 
-## 📤 Salida del análisis
+## Salida del análisis
 
 - Reporte estructurado en **JSON**
 - Salida legible por consola con advertencias
@@ -87,7 +87,7 @@ StaticCAnalyzer/
 
 ---
 
-## 🚀 Uso básico
+## Uso básico
 
 ```bash
 python main.py analyze examples/example.c
@@ -111,7 +111,7 @@ La herramienta está pensada para ser ejecutada en pipelines CI/CD:
 
 ---
 
-## ⚠️ Limitaciones conocidas
+## Limitaciones conocidas
 
 - No se realiza análisis interprocedimental completo
 - No se modela el flujo de ejecución real
@@ -122,7 +122,7 @@ Estas limitaciones son intencionadas y documentadas como parte del aprendizaje.
 
 ---
 
-## 📚 Motivación
+## Motivación
 
 Este proyecto nace como ejercicio técnico para profundizar en:
 - Análisis estático
