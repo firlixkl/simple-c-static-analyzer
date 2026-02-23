@@ -1,9 +1,12 @@
 # test_parser.py
 
-from sca_parser.clang_parser import ClangParser
 
-parser = ClangParser()
-ast = parser.parse_file("CLI/test.c")
+from Analyzer.analyzer import Analyzer
 
-for node in ast:
-    print(node)
+
+analyzer = Analyzer()
+issues = analyzer.analyze("CLI/test.c")
+
+
+for issue in issues:
+    print(issue)
