@@ -1,11 +1,12 @@
 from sca_parser.clang_parser import ClangParser
+from Reglas.unused_variable_rule import UnusedVariableRule
 #from analysis.rules.empty_function import EmptyFunctionRule
 
 class Analyzer:
     def __init__(self):
         self.parser = ClangParser()
         self.rules = [
-            #EmptyFunctionRule(),
+            UnusedVariableRule(),
         ]
 
     def analyze(self, file_path):
@@ -18,12 +19,12 @@ class Analyzer:
 
         issues = []
 
-        # Da error   File "C:\Users\Felipe\Documents\GitHub\simple-c-static-analyzer\StaticCAnalyzer\Analyzer\analyzer.py", line 21, in analyze for function in ast.functions: AttributeError: 'list' object has no attribute 'functions'
-        '''for function in ast.functions:
+        for node in ast:
             for rule in self.rules:
-                result = rule.check(function)
+                result = rule.check(node)
                 if result:
-                    issues.append(result)'''
+                    issues.append(result)
+
 
         
 
